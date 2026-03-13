@@ -2,32 +2,32 @@ package Lexicon.Hans;
 
 public class Contact {
 
-    private String name;
-    private String number;
+    private String firstName;
+    private String mobileNumber;
 
     public Contact(String name, String number) {
-        this.name = name;
-        this.number = number;
+        this.firstName = name;
+        this.mobileNumber = number;
     }
 
     public String getName() {
-        return name;
+        return firstName;
     }
 
     public String getNumber() {
-        return number;
+        return mobileNumber;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.firstName = name;
     }
 
     public void setNumber(String number) {
-        this.number = number;
+        this.mobileNumber = number;
     }
 
     @Override
     public String toString() {
-        return name + "|" + number;
+        return firstName + "|" + mobileNumber;
     }
 }

@@ -2,14 +2,25 @@ package Lexicon.Hans;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class ContactsMap {
 
-    private Map<String, String> contactMap = new HashMap<>();
+    private Map<Contact, String> contactMap = new HashMap<>();
+    Scanner scanner = new Scanner(System.in);
 
-    //add method
+    public void addContact() {
+        String inputName, inputNumber;
+        System.out.print("\nEnter name: ");
+        inputName = scanner.next();
+        System.out.println("\nEnter mobile: ");
+    }
 
-    //search method
+    public boolean searchContact() {
+       return;
+    }
 
-    //display method
+    public void displayContacts() {
+
+    }
 }
