@@ -1,38 +1,40 @@
 package Lexicon.Hans;
 
 import java.util.Scanner;
-import Lexicon.Hans.ContactsMap;
+import Lexicon.Hans.ContactsHashMap;
 
 public class Main {
     static void main() {
 
-        ContactsMap contactsMap = new ContactsMap();
+        ContactsHashMap contacts = new ContactsHashMap();
         Scanner scanner = new Scanner(System.in);
+        boolean mainLoop = true;
 
-            System.out.println("Welcome to Contact Management!");
-        while (true) {
+            System.out.println("\nWelcome to Contact Management!");
+        while (mainLoop) {
 
-            System.out.println("""
-                1. Add Contact
+            System.out.print("""
+                \n1. Add Contact
                 2. Search by Name
                 3. Display All Contacts
                 0. End App
-                """ + "\nInput: ");
+                Input:""" + " ");
+            //System.out.print("Input: ");
 
             int select = scanner.nextInt();
 
             switch (select) {
                 case 1:
-                    //add method
+                    contacts.addContact();
                     break;
                 case 2:
                     //search method
                     break;
                 case 3:
-                    //display all method
+                    contacts.displayContacts();
                     break;
                 case 0:
-                    //Exit code
+                    mainLoop = false;
             }
         }
     }
