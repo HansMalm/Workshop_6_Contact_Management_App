@@ -22,12 +22,16 @@ public class Main {
 
             switch (select) {
                 case 1:
+                    //add method
                     break;
                 case 2:
+                    //search method
                     break;
                 case 3:
+                    //display all method
                     break;
                 case 0:
+                    //Exit code
             }
         }
     }
