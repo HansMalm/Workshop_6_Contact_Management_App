@@ -7,4 +7,9 @@ public class ContactsMap {
 
     private Map<String, String> contactMap = new HashMap<>();
 
+    //add method
+
+    //search method
+
+    //display method
 }
