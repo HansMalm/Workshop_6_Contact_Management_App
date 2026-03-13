@@ -1,6 +1,7 @@
 package Lexicon.Hans;
 
 import java.util.Scanner;
+import Lexicon.Hans.ContactsMap;
 
 public class Main {
     static void main() {

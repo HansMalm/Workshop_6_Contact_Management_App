@@ -13,7 +13,9 @@ public class ContactsMap {
         String inputName, inputNumber;
         System.out.print("\nEnter name: ");
         inputName = scanner.next();
-        System.out.println("\nEnter mobile: ");
+        System.out.print("\nEnter mobile: ");
+        inputNumber = scanner.next();
+        contactMap
     }
 
     public boolean searchContact() {
