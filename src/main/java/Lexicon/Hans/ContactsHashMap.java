@@ -61,12 +61,11 @@ public class ContactsHashMap {
         }
         if (addContact) {
             contactMap.put(inputNumber, inputName);
-            System.out.println("New Contact " + contactToString(inputNumber, contactMap) + "\nAdded Successfully!");
+            System.out.println("New Contact " + contactToString(inputNumber) + "\nAdded Successfully!");
         }
     }
 
     public static void searchContact() {
-
         String searchName;
         boolean noMatch = true;
 
@@ -74,7 +73,7 @@ public class ContactsHashMap {
         searchName = scanner.next();
         for (String i : contactMap.keySet()) {
             if (contactMap.get(i).equals(searchName)) {
-                System.out.println("Found Contact: " + contactToString(i, contactMap));
+                System.out.println("Found Contact: " + contactToString(i));
                 noMatch = false;
             }
         }
@@ -87,13 +86,13 @@ public class ContactsHashMap {
         System.out.println("\n3 Display All Contacts:");
         int displayCount = 1;
         for (String i : contactMap.keySet()) {
-            System.out.println(displayCount + ". " + contactToString(i, contactMap));
+            System.out.println(displayCount + ". " + contactToString(i));
             displayCount++;
         }
     }
 
-    public static String contactToString(String key, HashMap contacts) {
-        return (contacts.get(key) + "|" + key);
+    public static String contactToString(String key) {
+        return (contactMap.get(key) + "|" + key);
     }
 
 }
