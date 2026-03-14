@@ -20,7 +20,7 @@ public class ContactsHashMap {
 
         for (String i : contactMap.keySet()) {
             if (i.equals(inputNumber)) {
-                System.out.println("Input Rejected.\nContact number already exists!");
+                System.out.println("Input Rejected.\nContact number " + inputNumber + " already exists!");
                 addContact = false;
             }
         }
