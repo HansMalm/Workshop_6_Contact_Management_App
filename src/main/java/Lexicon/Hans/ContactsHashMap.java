@@ -10,8 +10,8 @@ public class ContactsHashMap {
 
     public void addContact() {
         String inputName, inputNumber;
-        System.out.println("1. Add contact.");
-        System.out.print("\nEnter name: ");
+        System.out.println("\n1. Add contact.");
+        System.out.print("Enter name: ");
         inputName = scanner.next();
         System.out.print("Enter mobile: ");
         inputNumber = scanner.next();
