@@ -30,4 +30,8 @@ public class Contact {
     public String toString() {
         return firstName + "|" + mobileNumber;
     }
+
+    public void testPrint() {
+
+    }
 }

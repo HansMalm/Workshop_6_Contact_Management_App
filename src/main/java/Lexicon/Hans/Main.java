@@ -19,7 +19,6 @@ public class Main {
                 3. Display All Contacts
                 0. End App
                 Input:""" + " ");
-            //System.out.print("Input: ");
 
             int select = scanner.nextInt();
 
@@ -28,12 +27,13 @@ public class Main {
                     contacts.addContact();
                     break;
                 case 2:
-                    //search method
+                    contacts.searchContact();
                     break;
                 case 3:
                     contacts.displayContacts();
                     break;
                 case 0:
+                    System.out.println("0. End App.");
                     mainLoop = false;
             }
         }
