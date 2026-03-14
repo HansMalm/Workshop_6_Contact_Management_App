@@ -10,12 +10,24 @@ public class ContactsHashMap {
 
     public void addContact() {
         String inputName, inputNumber;
+        boolean addContact = true;
+
         System.out.println("\n1. Add contact.");
         System.out.print("Enter name: ");
         inputName = scanner.next();
         System.out.print("Enter mobile: ");
         inputNumber = scanner.next();
-        contactMap.put(inputNumber, inputName);
+
+        for (String i : contactMap.keySet()) {
+            if (i.equals(inputNumber)) {
+                System.out.println("Input Rejected.\nContact number already exists!");
+                addContact = false;
+            }
+        }
+        if (addContact) {
+            contactMap.put(inputNumber, inputName);
+            System.out.println("New Contact " + contactToString(inputNumber, contactMap) + "\nAdded Successfully!");
+        }
     }
 
     public void searchContact() {
@@ -27,7 +39,7 @@ public class ContactsHashMap {
         searchName = scanner.next();
         for (String i : contactMap.keySet()) {
             if (contactMap.get(i).equals(searchName)) {
-                System.out.println("Found Contact: " + contactMap.get(i) + "|" + i);
+                System.out.println("Found Contact: " + contactToString(i, contactMap));
                 noMatch = false;
             }
         }
@@ -36,10 +48,17 @@ public class ContactsHashMap {
             }
     }
 
-    public void displayContacts() {
+    public void displayAllContacts() {
         System.out.println("\n3 Display All Contacts:");
+        int displayCount = 1;
         for (String i : contactMap.keySet()) {
-            System.out.println(contactMap.get(i) + "|" + i);
+            System.out.println(displayCount + ". " + contactToString(i, contactMap));
+            displayCount++;
         }
     }
+
+    public String contactToString(String key, HashMap contacts) {
+        return (contacts.get(key) + "|" + key);
+    }
+
 }

@@ -29,7 +29,7 @@ public class Main {
                     contacts.searchContact();
                     break;
                 case 3:
-                    contacts.displayContacts();
+                    contacts.displayAllContacts();
                     break;
                 case 0:
                     System.out.println("0. End App.");
