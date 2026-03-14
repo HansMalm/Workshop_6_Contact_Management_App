@@ -4,35 +4,27 @@ import java.util.Scanner;
 
 public class Main {
     static void main() {
-
-        ContactsHashMap contacts = new ContactsHashMap();
         Scanner scanner = new Scanner(System.in);
         boolean mainLoop = true;
 
-            System.out.println("\nWelcome to Contact Management!");
         while (mainLoop) {
-
             System.out.print("""
-                \n1. Add Contact
-                2. Search by Name
-                3. Display All Contacts
-                0. End App
-                Input:""" + " ");
+                    
+                    1. Load ArrayList Contacts App.
+                    2. Load HashMap Contacts App.
+                    0. Exit.
+                    Input:""" + " ");
+            int menuSelect = scanner.nextInt();
 
-            int select = scanner.nextInt();
-
-            switch (select) {
+            switch (menuSelect) {
                 case 1:
-                    contacts.addContact();
+                    System.out.println("Not implemented yet");
                     break;
                 case 2:
-                    contacts.searchContact();
-                    break;
-                case 3:
-                    contacts.displayAllContacts();
+                    ContactsHashMap.hashMapMenu();
                     break;
                 case 0:
-                    System.out.println("0. End App.");
+                    System.out.println("Exit.");
                     mainLoop = false;
             }
         }

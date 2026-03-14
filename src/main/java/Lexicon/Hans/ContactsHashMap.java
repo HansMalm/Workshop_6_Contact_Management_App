@@ -5,10 +5,45 @@ import java.util.Scanner;
 
 public class ContactsHashMap {
 
-    private final HashMap<String, String> contactMap = new HashMap<>();
-    Scanner scanner = new Scanner(System.in);
+    private static final HashMap<String, String> contactMap = new HashMap<>();
+    private static final Scanner scanner = new Scanner(System.in);
 
-    public void addContact() {
+    //Main Menu
+    public static void hashMapMenu() {
+        boolean menuLoop = true;
+
+        System.out.println("\nWelcome to Contact Management!\nHashMap version!");
+        while(menuLoop) {
+
+        System.out.print("""
+                
+                1. Add Contact
+                2. Search by Name
+                3. Display All Contacts
+                0. End App
+                Input:""" + " ");
+
+        int select = scanner.nextInt();
+
+        switch (select) {
+            case 1:
+                addContact();
+                break;
+            case 2:
+                searchContact();
+                break;
+            case 3:
+                displayAllContacts();
+                break;
+            case 0:
+                System.out.println("0. End App.");
+                menuLoop = false;
+        }
+    }
+}
+
+
+    public static void addContact() {
         String inputName, inputNumber;
         boolean addContact = true;
 
@@ -30,7 +65,7 @@ public class ContactsHashMap {
         }
     }
 
-    public void searchContact() {
+    public static void searchContact() {
 
         String searchName;
         boolean noMatch = true;
@@ -48,7 +83,7 @@ public class ContactsHashMap {
             }
     }
 
-    public void displayAllContacts() {
+    public static void displayAllContacts() {
         System.out.println("\n3 Display All Contacts:");
         int displayCount = 1;
         for (String i : contactMap.keySet()) {
@@ -57,7 +92,7 @@ public class ContactsHashMap {
         }
     }
 
-    public String contactToString(String key, HashMap contacts) {
+    public static String contactToString(String key, HashMap contacts) {
         return (contacts.get(key) + "|" + key);
     }
 
